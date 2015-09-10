@@ -1,4 +1,4 @@
 PushElixirOver
 ==============
 
-** TODO: Add description **
+lib for creating pushes for [Pushover](https://pushover.net/) and also a way for me to learn Elixir

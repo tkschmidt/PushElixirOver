@@ -1,6 +1,22 @@
 defmodule PushElixirOver do
   use Application
 
+  @doc """
+  Defines the endpoint for PushOverApi
+  """
+  def endpointUrl() do
+    "https://api.pushover.net/1/messages.json"
+  end
+ 
+  @doc """
+  Gets PUSHOVER_KEY from system ENV
+  Returns binary
+  """
+  def key do
+    Application.get_env(:pushover, :key) ||
+    System.get_env("PUSHOVER_KEY")
+  end
+
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
